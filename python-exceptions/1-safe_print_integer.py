@@ -1,5 +1,5 @@
 #!/usr/bin/python
-3
+
 
 def safe_print_integer(value):
     try:
