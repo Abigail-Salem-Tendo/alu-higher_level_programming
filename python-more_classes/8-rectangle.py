@@ -48,26 +48,39 @@ class Rectangle:
 
     def area(self):
         """return the area"""
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
         """return the perimeter"""
         if self.width == 0 or self.height == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
 
     def __str__(self):
         """return string representation"""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(str(self.print_symbol) * self.width
-                for _ in range(self.height))
+        return "\n".join(
+                str(self.print_symbol) * self.__width
+                for _ in range(self.__height)
+        )
 
     def __repr__(self):
         """return the strng that recreates the rectangle"""
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """Print a message when the rectangle is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """return the rectangle with the bigger area"""
+        if not isinstance(rect1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
