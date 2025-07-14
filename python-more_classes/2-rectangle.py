@@ -1,27 +1,27 @@
 #!/usr/bin/python3
-"""
-This class defines a rectangle based on
-width and height
+"""This is a class that is based
+off 1-rectangle but finds the area
+and perimeter
 """
 
 
 class Rectangle:
-    """Private instance attribute width"""
-
+    """This class deines the methods and attributes
+    Attributes: include width, height, and value
+    """
     def __init__(self, width=0, height=0):
-        """Initialze the rectangle with optional width and height
-        """
+        """Initialsing the class"""
         self.width = width
         self.height = height
-
+    
     @property
     def width(self):
-        """Retieve the width"""
+        """REtrieves the width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set the width with validation."""
+        """Validating the value"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -30,14 +30,24 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieve the height"""
+        """Retrieves the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set the height with validation"""
+        """Validating the height value"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Returns the rectangle area"""
+        return self.width * self.height
+
+    def perimeter(self):
+        """Returns the perimeter of the rectangle"""
+        if self.width == 0 or self.height == 0:
+            return 0
+        return (self.width + self.height) * 2
