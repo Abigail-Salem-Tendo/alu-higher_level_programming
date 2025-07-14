@@ -60,6 +60,7 @@ class Rectangle:
         """return string representation"""
         if self.width == 0 or self.height == 0:
             return ""
+        symbol = str(getattr(self, 'print_symbol', Rectangle.print_symbol))
         return "\n".join(["#" * self.width for _ in range(self.height)])
 
     def __repr__(self):
