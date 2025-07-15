@@ -5,7 +5,7 @@ its subclass
 """
 
 
-def is_kind _of_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
     This function returns true is
     instance of class or subclass

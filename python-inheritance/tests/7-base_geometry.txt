@@ -1,50 +1,24 @@
-Test cases for 7-base_geometry.py
+	bg = BaseGeometry
+	bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
 
-=== BaseGeometry Class Tests ===
 
-1. area() method
-   - Should raise an Exception with message "area() is not implemented"
-   - Test steps:
-     1. Create BaseGeometry instance
-     2. Call area() method
-     3. Verify Exception is raised
-     4. Verify exception message matches "area() is not implemented"
+	bg.integer_validator("my_int", 10)
+	bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
 
-2. integer_validator() with valid input
-   - Should accept positive integers without raising exceptions
-   - Test cases:
-     * integer_validator("width", 5)
-     * integer_validator("height", 1)
-     * integer_validator("large_num", 1000000)
 
-3. integer_validator() with non-integer types
-   - Should raise TypeError with correct message
-   - Test cases:
-     * string: integer_validator("name", "John")
-       - Expected: TypeError with message "name must be an integer"
-     * float: integer_validator("price", 12.5)
-       - Expected: TypeError with message "price must be an integer"
-     * boolean: integer_validator("flag", True)
-       - Expected: TypeError with message "flag must be an integer"
+	bg.integer_validator("age", 0)
+Traceback (most recent call last):
+...
+ValueError: age must be greater than 0
 
-4. integer_validator() with zero or negative
-   - Should raise ValueError with correct message
-   - Test cases:
-     * zero: integer_validator("age", 0)
-       - Expected: ValueError with message "age must be greater than 0"
-     * negative: integer_validator("distance", -4)
-       - Expected: ValueError with message "distance must be greater than 0"
 
-5. Edge cases
-   - Verify name parameter is included in error messages
-   - Verify method works with very large positive integers
-   - Verify method handles None value appropriately
-     * integer_validator("value", None)
-       - Expected: TypeError with message "value must be an integer"
-
-=== Expected Output ===
-When running test cases, the following should be observed:
-- Valid cases pass silently
-- Invalid cases raise appropriate exceptions with formatted messages
-  containing the parameter name
-- All test cases should be handled by the implementation
+	bg.integer_validator("distance", -5)
+Traceback (most recent call last):
+...
+ValueError: distance must be greater than 0
