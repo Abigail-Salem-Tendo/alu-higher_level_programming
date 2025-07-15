@@ -1,3 +1,4 @@
+>>> from base_geometry_7 import BaseGeometry
 >>> bg = BaseGeometry()
 
 >>> bg.area()
