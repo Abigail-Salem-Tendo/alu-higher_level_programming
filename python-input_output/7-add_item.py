@@ -4,8 +4,6 @@ This module adds arguments to a
 Python list, and saves them to a file
 in json format
 """
-
-
 import sys
 """
 adds arguments to a python list
