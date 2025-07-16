@@ -4,10 +4,9 @@ This module adds arguments to a
 Python list, and saves them to a file
 in json format
 """
+
+
 import sys
-"""
-adds arguments to a python list
-"""
 
 
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
