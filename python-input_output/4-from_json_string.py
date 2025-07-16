@@ -5,6 +5,9 @@ object (ds) represented by a json string
 """
 
 
+import json
+
+
 def from_json_string(my_str):
     """
     This function returns the object
