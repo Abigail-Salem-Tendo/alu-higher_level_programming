@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""display the value of X-reques-Id in response header"""
+"""This module displays the value of X-reques-Id in response header."""
 
 
 import requests

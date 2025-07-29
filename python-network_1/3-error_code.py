@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""Sends request to url and handles error
-exceptions"""
+"""This module sends request to url and handles error exceptions."""
 
 
 import urllib.request

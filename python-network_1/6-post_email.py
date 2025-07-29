@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Sends a POSt request with an email and
-prints the response body
+This module sends a PoSt request with an
+email and prints the response body.
 """
 
 
