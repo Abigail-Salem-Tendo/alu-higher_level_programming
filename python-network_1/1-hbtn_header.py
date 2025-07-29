@@ -9,7 +9,8 @@ import urllib.request
 import sys
 
 url = sys.argv[1]
+req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
 
 with urllib.request.urlopen(url) as response:
-    x_request_id = response.getheader("X-Request-Id")
+    x_request_id = response.headers.get("X-Request-Id")
     print(x_request_id)
