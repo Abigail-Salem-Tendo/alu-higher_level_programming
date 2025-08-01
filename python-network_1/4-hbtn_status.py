@@ -4,7 +4,10 @@
 
 import requests
 
-url = 'https://alu-intranet.hbtn.io/status'
+url = [
+        'https://alu-intranet.hbtn.io/status',
+        'http://0.0.0.0:5000/status'
+]
 response = requests.get(url)
 text = response.text
 
