@@ -16,4 +16,3 @@ try:
     print("\t- utf8 content: {}".format(body.decode('utf-8')))
 except Exception as e:
     print("Error:", e)
-
