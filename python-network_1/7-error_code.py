@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Sends request to url and handles errors gracefully"""
+"""
+Sends request to url and handles errors gracefully
+"""
 
 
 import requests
