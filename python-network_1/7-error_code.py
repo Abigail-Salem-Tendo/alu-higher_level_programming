@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Sends request to url and handles errors gracefully
+Takes in a url, sends a request to the url and
+displays the body of the response.
 """
 
 

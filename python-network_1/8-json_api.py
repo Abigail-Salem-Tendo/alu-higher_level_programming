@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Sends a POST request to http://0.0.0.0:5000/search_use
-with a letter.
+Takes in a letter and sends a POST request to a url
+with the letter as a parameter.
 """
 
 
