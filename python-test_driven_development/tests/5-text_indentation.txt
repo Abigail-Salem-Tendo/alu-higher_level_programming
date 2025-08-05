@@ -1,0 +1,24 @@
+5-text_indentation.text_indentation("Hello. How are you? I'm fine: thank you.")
+Hello.
+
+How are you?
+
+I'm fine:
+
+thank you.
+
+5-text_indentation.text_indentation("No punctuation here")
+No punctuation here
+
+5-text_indentation.text_indentation("No punctuation here")
+No punctuation here
+
+5-text_indentation.text_indentation("")
+Traceback (most recent call last):
+   ...
+TypeError: text must be a string
+
+5-text_indentation.text_indentation(42)
+Traceback (most recent call last):
+   ...
+TypeError: text must be a string

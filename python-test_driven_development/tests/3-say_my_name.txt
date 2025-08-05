@@ -1,0 +1,18 @@
+3-say_my_name.say_my_name("John", "Doe")
+My name is John Doe
+
+3-say_my_name.say_my_name("Alice")
+My name is Alice
+
+3-say_my_name.say_my_name("42")
+My name is 42
+
+3-say_my_name.say_my_name(100)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+3-say_my_name.say_my_name("Ada", None)
+Traceback (mos recent call last):
+    ...
+TypeError: last_name must be a string
