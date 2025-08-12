@@ -15,11 +15,13 @@ def print_square(size):
         TypeError: If size is not and integer
         ValueError: If size is less than 0
     """
-    if not isinstance(size, int):
-        raise TypeError("size must be an integer")
 
-    if size < 0:
+    if isinstance(size, float) and size < 0:
+        raise TypeError ("size nust be an integer")
+    elif not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    elif size < 0:
         raise ValueError("size must be >= 0")
 
-    for _ in range(size):
-        print("#" * size)
+    for row in range(size):
+        print('#' * size)
