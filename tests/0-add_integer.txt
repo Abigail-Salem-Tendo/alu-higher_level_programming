@@ -1,0 +1,7 @@
+This doctest checks the output format of a basic request to https://alx-intranet.hbtn.io.
+
+>>> type(response.status_code)
+<class 'int'>
+
+>>> response.status_code == 200
+True or False
