@@ -3,7 +3,7 @@
 const languages = [
   'C is fun',
   'Python is cool',
-  'Javascript is amazing'
+  'JavaScript is amazing'
 ];
 
 let result = '';
