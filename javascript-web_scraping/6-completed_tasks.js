@@ -17,7 +17,7 @@ request.get(apiUrl, (err, response, body) => {
       if (completedCount[todo.userId]) {
         completedCount[todo.userId]++;
       } else {
-	completedCount[todo.userId] = 1;
+        completedCount[todo.userId] = 1;
       }
     }
   });
